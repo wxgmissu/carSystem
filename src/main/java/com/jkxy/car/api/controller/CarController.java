@@ -125,8 +125,8 @@ public class CarController {
      */
     @GetMapping("findByWhere/{carName}/{page}/{size}")
     public JSONResult findByWhere(@PathVariable String carName,
-                                    @PathVariable Integer page,
-                                    @PathVariable Integer size) {
+                                  @PathVariable Integer page,
+                                  @PathVariable Integer size) {
         if (page >= 1) {
             List<Car> cars = carService.findCarInfoByWhere(carName, (page - 1) * size, size);
             return JSONResult.ok(cars);

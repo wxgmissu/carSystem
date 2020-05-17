@@ -46,11 +46,11 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public Car findByCarNameAndCarSeries(String carName, String carSeries) {
-        return carDao.findByCarNameAndCarSeries(carName,carSeries);
+        return carDao.findByCarNameAndCarSeries(carName, carSeries);
     }
 
     @Override
     public List<Car> findCarInfoByWhere(String carName, Integer page, Integer size) {
-        return carDao.findCarInfoByWhere(carName,page,size);
+        return carDao.findCarInfoByWhere(carName, page, size);
     }
 }

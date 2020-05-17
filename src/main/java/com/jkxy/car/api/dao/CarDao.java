@@ -27,9 +27,9 @@ public interface CarDao {
     void insertCar(Car car);
 
     @Select("select * from carMessage where carName = #{carName} and carSeries=#{carSeries} ")
-    Car findByCarNameAndCarSeries(@Param("carName") String carName,@Param("carSeries")String carSeries);
+    Car findByCarNameAndCarSeries(@Param("carName") String carName, @Param("carSeries") String carSeries);
 
     @Select("select * from carMessage where carName like concat('%',#{carName},'%') limit #{page},#{size}")
-    List<Car> findCarInfoByWhere(@Param("carName")String carName,@Param("page") Integer page ,@Param("size") Integer size);
+    List<Car> findCarInfoByWhere(@Param("carName") String carName, @Param("page") Integer page, @Param("size") Integer size);
 
 }
